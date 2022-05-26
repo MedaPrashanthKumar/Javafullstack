@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Welcome !!!!</h1>
+    <p>welcome {{name}}. welcome to our awesomeapp</p>
+    You can maintain your todos <a routerLink="/listtodos">here</a>
+    
+</div>
+
+<!-- <div class="container">
+    
+    Click Here to get a customized welcome message 
+    <button (click)="getwelcomeMessage()" class="btn btn-success">Get Welcome Message </button>
+</div> -->
+
+<div class="container">
+    
+    Click Here to get a customized welcome message 
+    <button (click)="getwelcomeMessageWithParameter()" class="btn btn-success">Get Welcome Message </button>
+</div>
+
+<!-- <div class="container" *ngIf="welcomeMessageFromService">
+    <h2>Your Customized Welcome Message </h2>
+    {{welcomeMessageFromService}}
+</div> -->
+
+<div class="container" *ngIf="welcomeMessageFromService">
+    <h2>Your Customized Welcome Message </h2>
+    {{welcomeMessageFromService}}
+</div>
+
+<!-- <div class="container" *ngIf="errorMessageFromService">
+    <h2>Your Customized Welcome Message </h2>
+    {{errorMessageFromService}}
+</div> -->
+<!-- routerLink  is used to navigate from one component to another  -->

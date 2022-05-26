@@ -1,0 +1,75 @@
+<!--  <table class="table table-striped table-hover">
+    <caption>MyTodos</caption>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{todo.id}}</td>
+            <td>{{todo.description}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<br>
+<!-- List of Todos -->
+<!-- 
+<table class="table table-striped table-hover">
+    <caption>MyTodo's</caption>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of todos">
+            <td>{{todo.id}}</td>
+            <td>{{todo.description}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+ 
+
+<!-- To display the data from the Todo class -->
+<h1>My Todo's</h1>
+<div class="alert alert-success" *ngIf="message">{{message}}</div>
+<div class="container">
+    <table class="table table-striped table-hover">
+     
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>isCompleted?</th>
+                <th>TargetDate</th>
+                <th>Update</th>
+                <th>Delete</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.id}}</td>
+                <td>{{todo.description}}</td>
+                <td>{{todo.done}}</td>
+                <td>{{todo.targetDate | date | uppercase}}</td>
+                <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button></td>
+                <td><button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <button (click)="addTodo()" class="btn btn-success">Add</button>
+        </div>
+        
+    </div>
+</div>
+
+
+ 
